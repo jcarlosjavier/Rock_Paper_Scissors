@@ -1,0 +1,25 @@
+Rock Paper Scissors
+
+var humanScore = 0;
+var computerScore = 0;
+
+*****logic to the computer choice****
+
+function getComputerChoice (array) {
+
+	const choice = Math.floor(Math.random() * array.length); 
+	return array[choice]; 
+}
+
+const arr = ['piedra', 'papel', 'tijera'];
+
+const computerChoice = getComputerChoice(arr);
+
+
+*****logic to get the human choice****
+
+const getHumanChoice = prompt("Inserte una de las siguientes opciones (Piedra, Papel, Tijera)");
+
+******Write the logic to play a single round*****
+
+whe the human and the computer choce one option the game should know whos the winner for one single round
