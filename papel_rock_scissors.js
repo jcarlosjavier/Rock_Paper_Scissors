@@ -27,30 +27,30 @@ function playGame() {
 
   function playRound(humanChoice, computerChoice) {
     if  (humanChoice === computerChoice) {
-        console.log('Draw');
+        alert(`DRAW\n |You chose ${humanChoice}\n|Computer chose ${computerChoice}`);
     } else if (
         (humanChoice === 'rock'  && computerChoice === 'scissors')  ||
         (humanChoice === 'paper'  && computerChoice === 'rock') ||
         (humanChoice === 'scissors'  && computerChoice === 'paper')
     ) { 
-        console.log(`You WIN`);
+        alert(`YOU WIN THE ROUND\n |You chose ${humanChoice}\n|Computer chose ${computerChoice}`);
         humanScore++;
     } else {
-        console.log(`You lose `); 
+        alert(`YOU LOSE ROUND\n |You chose ${humanChoice}\n|Computer chose ${computerChoice}`); 
         computerScore++;
     }        
   };
 
   for(let i = 0; i < 5; i++) {
       playRound(getHumanChoice(), getComputerChoice());
-      console.log(`Your score is ${humanScore}\nComputer score is ${computerScore}`);
+      alert(`Your score is ${humanScore}\n |Computer score is ${computerScore}`);
   }
 
   if (humanScore === computerScore) {
-    console.log("It's a tie, you should play one more round")
+    document.write("It's a tie, you should play one more round")
   } else if (humanScore > computerScore) {
-    console.log("YOU WIN THE GAME");
-  } else {console.log("COMPUTER WIN THE GAME");}
+    document.write("YOU WIN THE GAME" );
+  } else {document.write("COMPUTER WIN THE GAME" );}
 }
         
     playGame();
