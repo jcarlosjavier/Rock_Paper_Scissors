@@ -61,7 +61,7 @@ function getHumanChoice (humanType) {
     function checkWinner(){
       if (humanScore >= 5 || computerScore >= 5) {
         if (humanScore > computerScore) {
-          alert("YOU WIN THE GAME CONGRATULATION!!") 
+          alert("YOU WIN THE GAME. CONGRATULATION!!") 
         } else if (computerScore > humanScore) {
           alert("COMPUTER WIN THE GAME")
         } else {
