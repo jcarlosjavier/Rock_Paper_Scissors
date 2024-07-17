@@ -79,34 +79,26 @@ function getHumanChoice (humanType) {
       updateScore();
     }
   
-  function playGame() {
-  
+  function playGame() {  
+
     const paperBtn = document.createElement('button');
     const rockBtn = document.createElement('button');
     const scissorsBtn = document.createElement('button');
     
-
     paperBtn.textContent = 'paper';
     rockBtn.textContent = ' rock';
     scissorsBtn.textContent = 'scissors'
-    
-    
-    function removeStartButton () {
-      if (startButton) {
-        startButton.remove();
-      }
-    }
 
     paperBtn.addEventListener('click', () => {
-      removeStartButton();
+      //removeStartButton();
       playRound(getHumanChoice('paper'))});
 
     rockBtn.addEventListener('click', () => {
-      removeStartButton();
+      //removeStartButton();
       playRound(getHumanChoice('rock'))});
 
     scissorsBtn.addEventListener('click', () => { 
-      removeStartButton();
+      //removeStartButton();
       playRound(getHumanChoice('scissors'))});
 
     container.appendChild(paperBtn);
@@ -119,8 +111,18 @@ function getHumanChoice (humanType) {
       updateScore();
     }
   }
-        
-    startButton.addEventListener('click', playGame);
+     
+  
+  function removeStartButton() {
+    if (startButton) {
+      startButton.remove();
+    }
+  };
+
+  startButton.addEventListener('click', () => {
+      playGame();
+      removeStartButton();
+  });
        
 }); 
    
