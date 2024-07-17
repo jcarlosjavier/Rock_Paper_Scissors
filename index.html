@@ -1,4 +1,41 @@
-<script src="papel_rock_scissors.js"></script>
-<style> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paper_rock_scissors</title>
+    <script src="paper_rock_scissors.js"></script>
+    <style>
+        #container {
+            margin-top: 20px;
+        }
+        #scoreDisplay {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+
+        button {
+            margin: 5px;
+            border: 2px solid #333;
+            background-color: lightseagreen;
+            color: black ;
+            border-radius: 3.5px;
     
-</style>
+
+        }
+        button:hover {
+            margin: 5px;
+            border: 2px solid #333;
+            background-color: lightblue;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="startButton">Start Game</button> 
+        <div id="scoreDisplay">Human: 0 - Computer: 0</div>
+    </div>
+</body>
+</html> 
+
